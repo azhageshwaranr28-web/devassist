@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="690" viewBox="0 0 1400 690">
+<defs><style>.t{font-family:Arial,sans-serif;fill:#102a43}.h{font:700 30px Arial;fill:#fff}.s{font:600 18px Arial}.p{font:14px Arial;fill:#486581}.box{fill:#f5f9fc;stroke:#2f80ed;stroke-width:2;rx:12}.adv{fill:#fff8eb;stroke:#f2994a;stroke-width:2;rx:12}.llm{fill:#edf9f2;stroke:#27ae60;stroke-width:2;rx:12}.line{stroke:#829ab1;stroke-width:3;marker-end:url(#a)}.lane{fill:#102a43;rx:14}</style><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#829ab1"/></marker></defs>
+<rect width="1400" height="690" fill="#fff"/><rect x="45" y="34" width="1310" height="58" class="lane"/><text x="75" y="73" class="h">DevAssist — grounded two-stage RAG architecture</text>
+<text x="50" y="140" class="s t">OFFLINE INGESTION</text>
+<g><rect x="50" y="165" width="185" height="105" class="box"/><text x="73" y="205" class="s t">Stack Overflow</text><text x="73" y="232" class="p">Questions + answers</text><text x="73" y="252" class="p">IDs, scores, tags</text>
+<rect x="285" y="165" width="185" height="105" class="box"/><text x="315" y="205" class="s t">Preprocess</text><text x="315" y="232" class="p">Join + clean HTML</text><text x="315" y="252" class="p">Keep code + metadata</text>
+<rect x="520" y="165" width="185" height="105" class="box"/><text x="560" y="205" class="s t">Chunk</text><text x="548" y="232" class="p">220 tokens</text><text x="548" y="252" class="p">30-token overlap</text>
+<rect x="755" y="165" width="185" height="105" class="box"/><text x="786" y="205" class="s t">Embeddings</text><text x="781" y="232" class="p">MiniLM · 384 dims</text><text x="781" y="252" class="p">Normalized vectors</text>
+<rect x="990" y="165" width="185" height="105" class="box"/><text x="1040" y="205" class="s t">Qdrant</text><text x="1018" y="232" class="p">Persistent vectors</text><text x="1018" y="252" class="p">Text + metadata</text>
+<rect x="1225" y="165" width="130" height="105" class="adv"/><text x="1250" y="205" class="s t">BM25</text><text x="1247" y="232" class="p">Exact token</text><text x="1247" y="252" class="p">index</text>
+<path d="M235 217 H280" class="line"/><path d="M470 217 H515" class="line"/><path d="M705 217 H750" class="line"/><path d="M940 217 H985" class="line"/><path d="M1175 217 H1220" class="line"/></g>
+<line x1="50" y1="315" x2="1355" y2="315" stroke="#d9e2ec" stroke-width="2"/><text x="50" y="360" class="s t">ONLINE QUERY</text>
+<g><rect x="50" y="390" width="165" height="105" class="box"/><text x="89" y="430" class="s t">User query</text><text x="72" y="457" class="p">Error + code + text</text>
+<rect x="265" y="390" width="165" height="105" class="box"/><text x="302" y="430" class="s t">Search ×2</text><text x="285" y="457" class="p">Vector + BM25</text>
+<rect x="480" y="390" width="165" height="105" class="adv"/><text x="525" y="430" class="s t">RRF fuse</text><text x="514" y="457" class="p">Top 20 chunks</text>
+<rect x="695" y="390" width="165" height="105" class="adv"/><text x="727" y="430" class="s t">Reranker</text><text x="713" y="457" class="p">Cross-encoder</text><text x="729" y="477" class="p">Top 5</text>
+<rect x="910" y="390" width="165" height="105" class="llm"/><text x="964" y="430" class="s t">LLM</text><text x="932" y="457" class="p">Grounded prompt</text><text x="940" y="477" class="p">Low temperature</text>
+<rect x="1125" y="390" width="230" height="105" class="llm"/><text x="1172" y="430" class="s t">Answer + sources</text><text x="1150" y="457" class="p">Metadata-built links</text><text x="1150" y="477" class="p">Insufficient-info path</text>
+<path d="M215 442 H260" class="line"/><path d="M430 442 H475" class="line"/><path d="M645 442 H690" class="line"/><path d="M860 442 H905" class="line"/><path d="M1075 442 H1120" class="line"/></g>
+<rect x="50" y="555" width="1305" height="80" fill="#f5f9fc" rx="12"/><text x="75" y="588" class="s t">Evaluation & observability</text><text x="75" y="615" class="p">25-query test set · Recall@5 · Precision@5 · MRR · manual faithfulness/relevance · per-stage timing · source validation</text>
+</svg>
