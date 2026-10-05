@@ -1,0 +1,16 @@
+{
+  "source": "Stack Exchange API / Stack Overflow",
+  "endpoint": "https://api.stackexchange.com/2.3",
+  "tags": [
+    "python",
+    "pandas",
+    "numpy",
+    "docker",
+    "tensorflow"
+  ],
+  "questions": 196,
+  "answers": 392,
+  "selection": "top 40 by votes per tag; positive-score answers; max 2 answers/question",
+  "license": "Stack Overflow user contributions are CC BY-SA; retain source links and attribution.",
+  "downloaded_at_utc": "2026-10-05T05:58:28Z"
+}
